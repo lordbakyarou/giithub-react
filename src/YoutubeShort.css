@@ -1,0 +1,24 @@
+.youtube-shorts-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.youtube-short {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.youtube-short.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.youtube-short.active ~ .youtube-short {
+  transform: translateY(100%);
+}
